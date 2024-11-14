@@ -145,124 +145,148 @@
   </nav>
 </header>
 
-<body><!-- Custom CSS for Typing Effect -->
- 
-<script>
-  // Animasi ketik untuk nama
-window.onload = () => {
-  const text = "Im Gilang Pratama Putra";
-  let index = 0;
-  const speed = 200; // Kecepatan animasi
-  const delay = 7000; // Delay setelah animasi selesai (6 detik)
+<body><!-- floating assets -->
+<img class="floating-bubble-1 absolute right-0 top-0 -z-[1]" src="images/floating-bubble-1.svg" alt=""/>
+<img class="floating-bubble-2 absolute left-0 top-[387px] -z-[1]" src="images/floating-bubble-2.svg" alt=""/>
+<img class="floating-bubble-3 absolute right-0 top-[605px] -z-[1]" src="images/floating-bubble-3.svg" alt=""/>
+<!-- ./end floating assets -->
 
-  function typeWriter() {
-    if (index < text.length) {
-      document.getElementById("name").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-
-  function resetAnimation() {
-    document.getElementById("name").innerHTML = "";  // Reset teks
-    index = 0;  // Reset index
-    typeWriter();  // Mulai animasi lagi
-  }
-
-  // Mulai animasi pertama kali
-  typeWriter();
-
-  // Mengulang animasi setiap 6 detik
-  setInterval(resetAnimation, delay);
-};
-</script>
-<style>
-  /* Animasi cursor berkedip */
-  .typewriter {
-    display: inline-block;
-    border-right: 2px solid #000;
-    padding-right: 5px;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-</style>
-
-<!-- Banner Section -->
-<section class="section banner relative">
-  <div class="container mx-auto">
-      <img class="banner-shape absolute -top-28 right-0 -z-10 w-full max-w-[20%]" src="images/banner-shape.svg" alt=""/>
+<!-- Common hero -->
+<section class="page-hero pt-16 pb-14">
+    <div class="page-hero-content mx-auto max-w-[768px] text-center">
+      <h1 class="mb-5 mt-8">
+        All Portofolio make <br> Web Development
+      </h1>
+    </div>
   </div>
 </section>
-<style>
-  .sis a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid #000000;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    margin: 1rem 1rem 1rem 0;
-    transition: 0.3s ease;
-    color: #050505;
-}
+<!-- end Common hero -->
 
-.sis a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #f7ae12;
-    box-shadow: 0  0 25px #686868;
-}
-
-</style>
-
-<!-- Home Section -->
-<section class="section">
-  <div class="max-w-5xl mx-auto px-4">
-    <!-- Layout Foto dan Teks -->
-    <div class="flex items-center justify-between mb-2">
-      <!-- Foto di kiri -->
-      <img src="images/gilang.jpg" alt="Profile Picture" class="w-40 h-50 rounded-full mr-8">
-      
-      <!-- Konten di kanan -->
-      <div class="text-left-justify">
-        <!-- Perkenalan Diri -->
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">
-          Hello :) 
-          <span id="name" class="typewriter"></span>
-        </h1>
-
-        <!-- Deskripsi -->
-        <p class="text-justify text-gray-700 mb-4">
-          I am highly motivated and enthusiastic about building a career as a System Analyst, Business Analyst, Product Owner,
-          or Project Manager with a solid background in IT and a proven ability to analyze system and business requirements
-          for application and product development
-        </p>
-
-        <!-- Social Media Links -->
-        <div class="sis">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+<section class="section pt-0">
+  <div class="container">
+    <h2 class="h4 mb-4">Featured Posts</h2>
+    <div class="featured-posts row">
+      <div class="mb-8 md:col-6">
+        <div class="card">
+          <img
+            class="card-img"
+            width="235"
+            height="304"
+            src="images/posts/post-1.png"
+            alt=""
+          />
+          <div class="card-content">
+            <div class="card-tags">
+              <a class="tag" href="#">Development</a>
+            </div>
+            <h3 class="h4 card-title">
+              <a href="blog-single.html"
+                >The Ultimate Guide to Google My Business</a
+              >
+            </h3>
+            <p>
+              Mauris blandit aliquet elit, eget tincidunt nibh dolor sit amet,
+            </p>
+            <div class="card-footer mt-6 flex space-x-4">
+              <span class="inline-flex items-center text-xs text-[#666]">
+                <svg
+                  class="mr-1.5"
+                  width="14"
+                  height="16"
+                  viewBox="0 0 14 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.5 2H11V0.375C11 0.16875 10.8313 0 10.625 0H9.375C9.16875 0 9 0.16875 9 0.375V2H5V0.375C5 0.16875 4.83125 0 4.625 0H3.375C3.16875 0 3 0.16875 3 0.375V2H1.5C0.671875 2 0 2.67188 0 3.5V14.5C0 15.3281 0.671875 16 1.5 16H12.5C13.3281 16 14 15.3281 14 14.5V3.5C14 2.67188 13.3281 2 12.5 2ZM12.3125 14.5H1.6875C1.58438 14.5 1.5 14.4156 1.5 14.3125V5H12.5V14.3125C12.5 14.4156 12.4156 14.5 12.3125 14.5Z"
+                    fill="#939393"
+                  />
+                </svg>
+                21st Sep,2020
+              </span>
+              <span class="inline-flex items-center text-xs text-[#666]">
+                <svg
+                  class="mr-1.5"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.65217 0C3.42496 0 0 3.58065 0 8C0 12.4194 3.42496 16 7.65217 16C11.8794 16 15.3043 12.4194 15.3043 8C15.3043 3.58065 11.8794 0 7.65217 0ZM7.65217 14.4516C4.24264 14.4516 1.48107 11.5645 1.48107 8C1.48107 4.43548 4.24264 1.54839 7.65217 1.54839C11.0617 1.54839 13.8233 4.43548 13.8233 8C13.8233 11.5645 11.0617 14.4516 7.65217 14.4516ZM9.55905 11.0839L6.93941 9.09355C6.84376 9.01935 6.78822 8.90323 6.78822 8.78065V3.48387C6.78822 3.27097 6.95484 3.09677 7.15849 3.09677H8.14586C8.34951 3.09677 8.51613 3.27097 8.51613 3.48387V8.05484L10.5773 9.62258C10.7439 9.74839 10.7778 9.99032 10.6575 10.1645L10.0774 11C9.95708 11.171 9.72567 11.2097 9.55905 11.0839Z"
+                    fill="#939393"
+                  />
+                </svg>
+                10 Min To Read
+              </span>
+            </div>
+          </div>
         </div>
-
-        <!-- HIRE ME Section -->
+      </div>
+      <div class="mb-8 md:col-6">
+        <div class="card">
+          <img
+            class="card-img"
+            width="235"
+            height="304"
+            src="images/posts/post-2.png"
+            alt=""
+          />
+          <div class="card-content">
+            <div class="card-tags">
+              <a class="tag" href="#">Development</a>
+            </div>
+            <h3 class="h4 card-title">
+              <a href="blog-single.html">
+                The Ultimate Guide to Redirects Explained
+              </a>
+            </h3>
+            <p>
+              Mauris blandit aliquet elit, eget tincidunt nibh dolor sit amet,
+            </p>
+            <div class="card-footer mt-6 flex space-x-4">
+              <span class="inline-flex items-center text-xs text-[#666]">
+                <svg
+                  class="mr-1.5"
+                  width="14"
+                  height="16"
+                  viewBox="0 0 14 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 2H11V0.375C11 0.16875 10.8313 0 10.625 0H9.375C9.16875 0 9 0.16875 9 0.375V2H5V0.375C5 0.16875 4.83125 0 4.625 0H3.375C3.16875 0 3 0.16875 3 0.375V2H1.5C0.671875 2 0 2.67188 0 3.5V14.5C0 15.3281 0.671875 16 1.5 16H12.5C13.3281 16 14 15.3281 14 14.5V3.5C14 2.67188 13.3281 2 12.5 2ZM12.3125 14.5H1.6875C1.58438 14.5 1.5 14.4156 1.5 14.3125V5H12.5V14.3125C12.5 14.4156 12.4156 14.5 12.3125 14.5Z"
+                    fill="#939393"
+                  />
+                </svg>
+                21st Sep,2020
+              </span>
+              <span class="inline-flex items-center text-xs text-[#666]">
+                <svg
+                  class="mr-1.5"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.65217 0C3.42496 0 0 3.58065 0 8C0 12.4194 3.42496 16 7.65217 16C11.8794 16 15.3043 12.4194 15.3043 8C15.3043 3.58065 11.8794 0 7.65217 0ZM7.65217 14.4516C4.24264 14.4516 1.48107 11.5645 1.48107 8C1.48107 4.43548 4.24264 1.54839 7.65217 1.54839C11.0617 1.54839 13.8233 4.43548 13.8233 8C13.8233 11.5645 11.0617 14.4516 7.65217 14.4516ZM9.55905 11.0839L6.93941 9.09355C6.84376 9.01935 6.78822 8.90323 6.78822 8.78065V3.48387C6.78822 3.27097 6.95484 3.09677 7.15849 3.09677H8.14586C8.34951 3.09677 8.51613 3.27097 8.51613 3.48387V8.05484L10.5773 9.62258C10.7439 9.74839 10.7778 9.99032 10.6575 10.1645L10.0774 11C9.95708 11.171 9.72567 11.2097 9.55905 11.0839Z"
+                    fill="#939393"
+                  />
+                </svg>
+                10 Min To Read
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Key Features Section -->
-<section class="section key-feature relative">
-  <img class="absolute left-0 top-0 -z-[1] -translate-y-1/2" src="images/icons/feature-shape.svg" alt=""/>
-</section><footer class="footer bg-theme-light/50">
+<footer class="footer bg-theme-light/50">
   <div class="container">
     <div class="row gx-5 pb-10 pt-[52px]">
       <!-- <div class="col-12 mt-12 md:col-6 lg:col-3">

@@ -58,7 +58,7 @@ gulp.task("pages", function () {
         fontSecondary: theme.fonts.font_family.secondary,
       })
     )
-    .pipe(comments(headerComments))
+    // .pipe(comments(headerComments))
     .pipe(gulp.dest(path.build.dir))
     .pipe(
       bs.reload({
@@ -79,7 +79,7 @@ gulp.task("styles", function () {
     .pipe(
       postcss([tailwindcss("./tailwind.config.js"), require("autoprefixer")])
     )
-    .pipe(comments(headerComments))
+    // .pipe(comments(headerComments))
     .pipe(gulp.dest(path.build.dir + "styles/"))
     .pipe(
       bs.reload({
@@ -95,7 +95,7 @@ gulp.task("scripts", function () {
     .pipe(jshint("./.jshintrc"))
     .pipe(jshint.reporter("jshint-stylish"))
     .on("error", gutil.log)
-    .pipe(comments(headerComments))
+    // .pipe(comments(headerComments))
     .pipe(gulp.dest(path.build.dir + "scripts/"))
     .pipe(
       bs.reload({

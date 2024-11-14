@@ -145,124 +145,85 @@
   </nav>
 </header>
 
-<body><!-- Custom CSS for Typing Effect -->
- 
-<script>
-  // Animasi ketik untuk nama
-window.onload = () => {
-  const text = "Im Gilang Pratama Putra";
-  let index = 0;
-  const speed = 200; // Kecepatan animasi
-  const delay = 7000; // Delay setelah animasi selesai (6 detik)
+<body><!-- floating assets -->
+<img class="floating-bubble-1 absolute right-0 top-0 -z-[1]" src="images/floating-bubble-1.svg" alt=""/>
+<img class="floating-bubble-2 absolute left-0 top-[387px] -z-[1]" src="images/floating-bubble-2.svg" alt=""/>
+<img class="floating-bubble-3 absolute right-0 top-[605px] -z-[1]" src="images/floating-bubble-3.svg" alt=""/>
+<img class="floating-bubble-2 absolute left-0 top-[1000px] -z-[1]" src="images/floating-bubble-2.svg" alt=""/>
+<img class="floating-bubble-3 absolute right-0 top-[1500px] -z-[1]" src="images/floating-bubble-3.svg" alt=""/>
+<img class="floating-bubble-2 absolute left-0 top-[1900px] -z-[1]" src="images/floating-bubble-2.svg" alt=""/>
+<img class="floating-bubble-3 absolute right-0 top-[2200px] -z-[1]" src="images/floating-bubble-3.svg" alt=""/>
+<img class="floating-bubble-2 absolute left-0 top-[2500px] -z-[1]" src="images/floating-bubble-2.svg" alt=""/>
+<img class="floating-bubble-3 absolute right-0 top-[2900px] -z-[1]" src="images/floating-bubble-3.svg" alt=""/>
+<!-- ./end floating assets -->
 
-  function typeWriter() {
-    if (index < text.length) {
-      document.getElementById("name").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeWriter, speed);
-    }
-  }
+<section class="font-sans py-10">
+  <div class="max-w-6xl mx-auto px-4">
+  
+    <div class="-my-6">
 
-  function resetAnimation() {
-    document.getElementById("name").innerHTML = "";  // Reset teks
-    index = 0;  // Reset index
-    typeWriter();  // Mulai animasi lagi
-  }
-
-  // Mulai animasi pertama kali
-  typeWriter();
-
-  // Mengulang animasi setiap 6 detik
-  setInterval(resetAnimation, delay);
-};
-</script>
-<style>
-  /* Animasi cursor berkedip */
-  .typewriter {
-    display: inline-block;
-    border-right: 2px solid #000;
-    padding-right: 5px;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-</style>
-
-<!-- Banner Section -->
-<section class="section banner relative">
-  <div class="container mx-auto">
-      <img class="banner-shape absolute -top-28 right-0 -z-10 w-full max-w-[20%]" src="images/banner-shape.svg" alt=""/>
-  </div>
-</section>
-<style>
-  .sis a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid #000000;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    margin: 1rem 1rem 1rem 0;
-    transition: 0.3s ease;
-    color: #050505;
-}
-
-.sis a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #f7ae12;
-    box-shadow: 0  0 25px #686868;
-}
-
-</style>
-
-<!-- Home Section -->
-<section class="section">
-  <div class="max-w-5xl mx-auto px-4">
-    <!-- Layout Foto dan Teks -->
-    <div class="flex items-center justify-between mb-2">
-      <!-- Foto di kiri -->
-      <img src="images/gilang.jpg" alt="Profile Picture" class="w-40 h-50 rounded-full mr-8">
-      
-      <!-- Konten di kanan -->
-      <div class="text-left-justify">
-        <!-- Perkenalan Diri -->
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">
-          Hello :) 
-          <span id="name" class="typewriter"></span>
-        </h1>
-
-        <!-- Deskripsi -->
-        <p class="text-justify text-gray-700 mb-4">
-          I am highly motivated and enthusiastic about building a career as a System Analyst, Business Analyst, Product Owner,
-          or Project Manager with a solid background in IT and a proven ability to analyze system and business requirements
-          for application and product development
-        </p>
-
-        <!-- Social Media Links -->
-        <div class="sis">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <!-- Item #1 -->
+        <div class="relative pl-8 sm:pl-32 py-6 group">
+          <!-- Purple label -->
+          <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Taaa</div>
+          <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-0 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1">
+              <!-- Start Date -->
+              <time class="sm:absolute left-[-3rem] translate-y-2 inline-flex items-center justify-center text-[14px] font-semibold uppercase w-32 h-7 mb-20 sm:mb-3 text-slate-950 bg-orange-200 rounded-full">
+                2019 - 2023
+            </time>
+            
+              <!-- Title -->
+              <div class="text-xl font-bold text-slate-900 sm:mr-auto">Acme was founded in Milan, Italy</div>
+              <!-- End Date -->
+              <time class="text-xl font-bold text-slate-900 sm:ml-auto sm:mr-9">freelance</time> 
+          </div>
+          <!-- Content -->
+          <div class="text-slate-900 sm:ml-auto mb-2">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
+          <ul class="list-outside list-disc  text-slate-800 text-justify text-sm sm:ml-auto sm:mr-9 pl-4">
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>            
+        </ul>      
         </div>
-
-        <!-- HIRE ME Section -->
-      </div>
+      
+        
+        <!-- Item #2 -->
+        <div class="relative pl-8 sm:pl-32 py-6 group">
+          <!-- Purple label -->
+          <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Taaa</div>
+          <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-0 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1">
+              <!-- Start Date -->
+              <time class="sm:absolute left-[-3rem] translate-y-2 inline-flex items-center justify-center text-[14px] font-semibold uppercase w-32 h-7 mb-20 sm:mb-3 text-slate-950 bg-orange-200 rounded-full">
+                2019 - 2023
+            </time>
+            
+              <!-- Title -->
+              <div class="text-xl font-bold text-slate-900 sm:mr-auto">Acme was founded in Milan, Italy</div>
+              <!-- End Date -->
+              <time class="text-xl font-bold text-slate-900 sm:ml-auto sm:mr-9">freelance</time> 
+          </div>
+          <!-- Content -->
+          <div class="text-slate-900 sm:ml-auto mb-2">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
+          <ul class="list-outside list-disc  text-slate-800 text-justify text-sm sm:ml-auto sm:mr-9 pl-4">
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>
+            <li class="mb-2">I led a team of 5 people to develop the ERP Center website using the Waterfall method. The project aimed to improve the efficiency of certificate collection and book purchasing at the ERP Center, and it lasted for 4 months.</p>
+            </li>            
+        </ul>      
+        </div>
+        
+    
+    </div>
     </div>
   </div>
-</section>
-
-<!-- Key Features Section -->
-<section class="section key-feature relative">
-  <img class="absolute left-0 top-0 -z-[1] -translate-y-1/2" src="images/icons/feature-shape.svg" alt=""/>
-</section><footer class="footer bg-theme-light/50">
+  </section><footer class="footer bg-theme-light/50">
   <div class="container">
     <div class="row gx-5 pb-10 pt-[52px]">
       <!-- <div class="col-12 mt-12 md:col-6 lg:col-3">
