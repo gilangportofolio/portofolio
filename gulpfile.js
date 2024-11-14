@@ -157,11 +157,18 @@ gulp.task(
   )
 );
 
-// Build Task
+// Task to copy build output to docs folder for GitHub Pages
+gulp.task("copyToDocs", function () {
+  return gulp.src("theme/**/*") // copy all files from the build directory
+    .pipe(gulp.dest("docs")); // destination folder is docs
+});
+
+// Update Build Task to include copyToDocs
 gulp.task(
   "build",
-  gulp.series("clean", "pages", "styles", "scripts", "plugins", "public")
+  gulp.series("clean", "pages", "styles", "scripts", "plugins", "public", "copyToDocs")
 );
+
 
 // Deploy Task
 gulp.task(
