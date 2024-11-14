@@ -1,0 +1,118 @@
+<!-- Custom CSS for Typing Effect -->
+ 
+<script>
+  // Animasi ketik untuk nama
+window.onload = () => {
+  const text = "Im Gilang Pratama Putra";
+  let index = 0;
+  const speed = 200; // Kecepatan animasi
+  const delay = 7000; // Delay setelah animasi selesai (6 detik)
+
+  function typeWriter() {
+    if (index < text.length) {
+      document.getElementById("name").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  function resetAnimation() {
+    document.getElementById("name").innerHTML = "";  // Reset teks
+    index = 0;  // Reset index
+    typeWriter();  // Mulai animasi lagi
+  }
+
+  // Mulai animasi pertama kali
+  typeWriter();
+
+  // Mengulang animasi setiap 6 detik
+  setInterval(resetAnimation, delay);
+};
+</script>
+<style>
+  /* Animasi cursor berkedip */
+  .typewriter {
+    display: inline-block;
+    border-right: 2px solid #000;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
+
+<!-- Banner Section -->
+<section class="section banner relative">
+  <div class="container mx-auto">
+      <img class="banner-shape absolute -top-28 right-0 -z-10 w-full max-w-[20%]" src="images/banner-shape.svg" alt=""/>
+  </div>
+</section>
+<style>
+  .sis a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #000000;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 1rem 1rem 1rem 0;
+    transition: 0.3s ease;
+    color: #050505;
+}
+
+.sis a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #f7ae12;
+    box-shadow: 0  0 25px #686868;
+}
+
+</style>
+
+<!-- Home Section -->
+<section class="section">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Layout Foto dan Teks -->
+    <div class="flex items-center justify-between mb-2">
+      <!-- Foto di kiri -->
+      <img src="images/gilang.jpg" alt="Profile Picture" class="w-40 h-50 rounded-full mr-8">
+      
+      <!-- Konten di kanan -->
+      <div class="text-left-justify">
+        <!-- Perkenalan Diri -->
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">
+          Hello :) 
+          <span id="name" class="typewriter"></span>
+        </h1>
+
+        <!-- Deskripsi -->
+        <p class="text-justify text-gray-700 mb-4">
+          I am highly motivated and enthusiastic about building a career as a System Analyst, Business Analyst, Product Owner,
+          or Project Manager with a solid background in IT and a proven ability to analyze system and business requirements
+          for application and product development
+        </p>
+
+        <!-- Social Media Links -->
+        <div class="sis">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <!-- HIRE ME Section -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section class="section key-feature relative">
+  <img class="absolute left-0 top-0 -z-[1] -translate-y-1/2" src="images/icons/feature-shape.svg" alt=""/>
+</section>
